@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app=""> 
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS ng-repeat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<style type="text/css">
+		table td,th {
+			padding: 10px;
+			border: 1px solid gray;
+		}
+		table th input {
+			border: none;
+		}
+		table{
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div ng-repeat="">
+	<div ng-init="myFavLan=[{name:'php',extension:'.php'},{name:'javascript',extension:'.js'},{name:'c++',extension:'.cpp'},{name:'ruby',extension:'.rb'}]"> 
+	<p ng-repeat="language in myFavLan">
+		Name: {{language.name}}<br>
+		Extension: {{language.extension}}<br>
+	</p>
+	</div> -->
+	<div ng-init="
+		users = [
+			{'name':'Ejaz', 'age':'25', 'gender':'Male'},
+			{'name':'Eja', 'age':'23', 'gender':'Male'},
+			{'name':'Ej', 'age':'23', 'gender':'Male'},
+			{'name':'E', 'age':'22', 'gender':'Male'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Esaz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Ejz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Ejz', 'age':'5s4', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Ejz', 'age':'54', 'gender':'Female'},
+			{'name':'Eaz', 'age':'45', 'gender':'Female'},
+			{'name':'Ez', 'age':'24', 'gender':'Male'}
+		];
+
+	">
+		
+	</div>
+	<!-- <div style="margin-bottom: 15px; font-size: 20px; color:red;" >
+		{{user.name}}----{{user.age}}----{{user.gender}}
+	</div> -->
+	<table>
+		<tr>
+			<th>Sr.no.</th>
+			<th><input style="width: 100%;" type="text" ng-model="mysearch.name" ng-init="mysearch.name = ''"></th>
+			<th><input style="width: 100%;" type="text" ng-model="mysearch.age" ng-init="mysearch.age = ''"></th>
+			<th><input style="width: 100%;" type="text" ng-model="mysearch.gender" ng-init="mysearch.gender = ''"></th>
+		</tr>
+		<tr ng-repeat="user in users | filter : mysearch">
+			<td>{{$index+1}}</td><td>{{user.name}}</td><td>{{user.age}}</td><td>{{user.gender}}</td>
+		</tr>
+	</table>
+</body>
+
+	
+</html>

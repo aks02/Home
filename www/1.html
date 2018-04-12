@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+<meta charset="utf-8">
+		<title>Angular JS + ng-bind</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+	<body>
+	Enter your name: <input type="text" ng-model="name"> </br>
+	Enter your age : <input type="integer" ng-model="age"></body></br>
+	<div>Name Enter by You: {{name}}</div>
+	<div>Age Enter by You: {{age}}</div>
+	
+	Name Enter by You:<div ng-bind="name"></div>
+	Age Enter by You:<div ng-bind="age"></div> 
+	
+	Write about yourself: <textarea ng-model="yourself"> </textarea>
+	<div data-ng-bind="yourself"></div> 
+
+
+	</body>
+</html>
